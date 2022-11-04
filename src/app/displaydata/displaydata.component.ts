@@ -32,5 +32,7 @@ export class DisplaydataComponent implements OnInit {
       });
       }
       };
+      //display 
+
 
 
