@@ -1,0 +1,75 @@
+<div class="container-fluid mt-3">
+    
+        <form [formGroup]="userform" style="width:50%" (ngSubmit)="addUsersData()" class="border border-info p-3" >
+
+          <h1>User Detail</h1>
+            <!-- Name input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form4Example1">Name :</label>
+              <input type="text" id="form4Example1" formControlName="name" name="name" [(ngModel)]="addUsers.name" class="form-control" />
+              <div id="emailHelp" class="form-text" *ngIf="name.invalid && name.dirty" style="color:red">Username is required</div>
+              
+            </div>
+          
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form4Example2">Mobile :</label>
+              <input type="text" id="form4Example2" formControlName="mobile" name="mobile" [(ngModel)]="addUsers.mobile" class="form-control" />
+              <div id="emailHelp" class="form-text" *ngIf="mobile.invalid && mobile.dirty" style="color:red">Mobile no is required</div>
+              
+            </div>
+          
+            <!-- Message input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form4Example3">Email :</label>
+                <input type="text" id="form4Example3" formControlName="email" name="email" [(ngModel)]="addUsers.email" class="form-control" />
+                <div id="emailHelp" class="form-text" *ngIf="email.invalid && email.dirty" style="color:red">Email is required</div>
+            </div>
+
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form4Example3">Password :</label>
+              <input type="text" id="form4Example3" formControlName="password" name="password" [(ngModel)]="addUsers.password" class="form-control" />
+            </div>
+
+            
+            <button class="btn btn-primary mx-4"  [disabled]="userform.invalid" >Register</button>
+            <!-- <button  class="btn btn-primary mx-3">Update</button>
+            <button  class="btn btn-primary mx-3">Delete</button> -->
+            
+            <button class="btn btn-primary mx-4"   routerLink="/display">View Users</button>
+          </form>
+
+          <!-- <button class="btn btn-primary mx-4"   routerLink="/display">Insert</button> -->
+
+          <!-- table display -->
+
+          <!-- <table id="datatable" class="table table-bordered dt-responsive nowrap w-100 datatables">
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Mobile</th>
+<th>Email</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let developer of getUsers"
+[attr.ID] = "developer.ID" >
+<td>{{ developer.id }}</td>
+<td>{{ developer.name }}</td>
+<td>{{ developer.mobile }}</td>
+<td>{{ developer.email }}</td>
+
+<td>
+<button type="button" routerLink="/editdeveloper/{{developer.ID}}" class="btn btn-primary waves-effect
+waves-light" >Edit</button>
+&nbsp;
+<button type="button" class="btn btn-danger waves-effect waves-light">Delete</button>
+</td>
+</tr>
+</tbody>
+</table> -->
+
+    
+</div>

@@ -1,0 +1,41 @@
+
+    <div class="container-fluid mt-3">
+    
+        <form  style="width:50%" (ngSubmit)="updatedeveloper()" class="border border-info p-3" >
+
+          <h1>User Detail</h1>
+            <!-- Name input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form4Example1">Name :</label>
+              <input type="text" id="form4Example1" name="name" [(ngModel)]="developer.name" class="form-control" />
+              <!-- <div id="emailHelp" class="form-text" *ngIf="name.invalid && name.dirty" style="color:red">Username is required</div> -->
+              
+            </div>
+          
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form4Example2">Mobile :</label>
+              <input type="text" id="form4Example2"  name="mobile" [(ngModel)]="developer.mobile" class="form-control" />
+              <!-- <div id="emailHelp" class="form-text" *ngIf="mobile.invalid && mobile.dirty" style="color:red">Mobile no is required</div> -->
+              
+            </div>
+          
+            <!-- Message input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form4Example3">Email :</label>
+                <input type="text" id="form4Example3"  name="email" [(ngModel)]="developer.email" class="form-control" />
+                <!-- <div id="emailHelp" class="form-text" *ngIf="email.invalid && email.dirty" style="color:red">Email is required</div> -->
+            </div>
+
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form4Example3">Password :</label>
+              <input type="text" id="form4Example3"  name="password" [(ngModel)]="developer.password" class="form-control" />
+            </div>
+
+            
+            <!-- <button class="btn btn-primary mx-4"  [disabled]="userform.invalid" >Register</button> -->
+            <!-- <button  class="btn btn-primary mx-3">Update</button>
+            <button  class="btn btn-primary mx-3">Delete</button> -->
+            
+            <button type="submit" class="btn btn-primary mx-4" >Submit</button>
+          </form>

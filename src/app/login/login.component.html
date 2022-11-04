@@ -1,0 +1,25 @@
+<div class="container-fluid mt-3">
+<form  [formGroup]="loginForm" style="width: 50%;" (ngSubmit)="addloginData()" class="border border-info p-3" >
+  
+    <h1>Login</h1>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email :</label>
+      <input type="text" class="form-control" [(ngModel)]="dataArr.username"  id="exampleInputEmail1" formControlName="username" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text" *ngIf="username.invalid && username.dirty" style="color:red">Username is required</div>
+      
+  
+
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" [(ngModel)]="dataArr.password"  formControlName="password" id="exampleInputPassword1">
+      <div id="emailHelp" class="form-text" *ngIf="password.invalid && password.dirty" style="color:red">Password is required</div>
+    
+    </div>
+    
+    <button type="submit"  class="btn btn-primary mx-4" [disabled]="loginForm.invalid">Login</button>
+    <!-- <button type="button" class="btn btn-primary mx-4">Reset</button> -->
+    <button type="button" routerLink="/user" class="btn btn-primary">Sign Up</button>
+  
+  </form>
+</div>
